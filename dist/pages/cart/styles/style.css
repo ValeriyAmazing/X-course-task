@@ -163,13 +163,13 @@ body {
   display: inline-block;
 }
 .cart .list .item__book-name {
-  flex: 1 0 170px;
+  flex: 1 1 170px;
 }
 .cart .list .item__count {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
 }
 .cart .list .item__total {
-  flex-basis: 50px;
+  flex: 1 1 50px;
   text-align: right;
 }
 .cart .list .item__total::after {

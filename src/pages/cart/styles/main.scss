@@ -45,15 +45,15 @@
                 display: inline-block;
             }
             &__book-name {
-                flex: 1 0 170px;
+                flex: 1 1 170px;
             }
 
             &__count {
-                flex: 1 0 auto;
+                flex: 1 1 auto;
             }
 
             &__total {
-                flex-basis: 50px;
+                flex: 1 1 50px;
                 text-align: right;
                 &::after {
                     content: "$";

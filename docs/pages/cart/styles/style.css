@@ -141,7 +141,7 @@ body {
 }
 .cart .list .item {
   display: flex;
-  gap: 30px;
+  gap: 15px;
   justify-content: space-between;
   background: rgba(255, 255, 255, 0.171);
   padding: 15px 20px;
@@ -163,10 +163,14 @@ body {
   display: inline-block;
 }
 .cart .list .item__book-name {
-  flex: 0 0 170px;
+  flex: 1 1 170px;
 }
 .cart .list .item__count {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
+}
+.cart .list .item__total {
+  flex: 1 1 50px;
+  text-align: right;
 }
 .cart .list .item__total::after {
   content: "$";
