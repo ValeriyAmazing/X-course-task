@@ -1,0 +1,16 @@
+-var pageList = [{title:'Sign In Page', link:'./pages/signin/'}, {title:'Book Page', link:'./pages/book/'}, {title:'Books list', link:'./pages/book_list/'}, {title:'Cart', link:'./pages/cart/'}, {title:'Empty Cart', link:'./pages/empty_cart/'}]
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./styles/style.css")
+        title X-Course-Task
+    body 
+        main
+            section 
+                ul 
+                    each item in pageList 
+                        li 
+                            a(href=item.link)= item.title 

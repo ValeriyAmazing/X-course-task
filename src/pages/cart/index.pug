@@ -1,0 +1,14 @@
+extends ../../layouts/layout
+block content
+    section.cart 
+        .cart__contianer.container
+            .cart__btn.btn Purshache
+            ul.cart__list.list 
+                for item in [{name:'Book name', count: 22, total: 440}, {name:'Book name long name', count: 2, total: 40},{name:'Book name very long long long long long-long long-long long-long name', count: 900, total: 44000}]
+                    li.list__item.item 
+                        span.item__book-name= item.name
+                        span.item__count= item.count
+                        span.item__total= item.total
+            .cart__total.total  
+                span.total__title Total: 
+                span.total__price 44480

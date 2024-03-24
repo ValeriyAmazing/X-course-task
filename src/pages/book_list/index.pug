@@ -1,0 +1,23 @@
+extends ../../layouts/layout
+block content
+    section.books-list
+        .book-list__container.container
+            .books-list__search.search
+                form.search__form.form(action="/") 
+                    .form__search-wrapper 
+                        input(type="search", name="search" id="search")
+                    .form__option-wrapper 
+                        select(name="category")
+                            option(value="price") Price
+                            option(value="author") Author 
+                            option(value="year") Year
+            .books-list__cards.cards 
+                ul.cards__list
+                    for book in [{name:'bookname', author:'authorBook',img:'/img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'/img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'/img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'/img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'/img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'/img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'/img/cover.webp', price:'100'}]
+                        li.cards__item.item
+                            img.item__img(src=book.img, alt="")
+                            p.item__name= book.name
+                            p.item__author= book.author 
+                            .item__bottom-wrapper
+                                span.item__price= book.price 
+                                button.item__btn.btn Viev

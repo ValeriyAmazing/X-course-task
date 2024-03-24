@@ -1,0 +1,47 @@
+.header {
+    position: relative;
+    z-index: 10;
+    background-color: $main;
+    padding-block: 15px;
+    font-size: 2.3rem;
+    box-shadow: 0px .4px 2px $accent;
+
+    .nav, .controls, .user {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .nav{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .controls{
+        gap: 20px;
+
+        &__basket-btn {
+            width: 35px;
+            height: 35px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            &:hover{
+                transition: 4.5s ease all;
+                path{fill: $accentA;}
+            }
+        }
+
+        .user{
+            gap: 10px;
+            font-size: 1.7rem;
+
+            &__img{
+                width: 40px;
+                height: 40px;
+                border: solid 3px black;
+                border-radius: 50%;
+            }
+        }
+    }
+}

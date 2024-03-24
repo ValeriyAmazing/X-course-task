@@ -1,0 +1,97 @@
+.books-list {
+    padding-block: 22px;
+
+    .search {
+        .form {
+            display: flex;
+            gap: 30px;
+
+            &__search-wrapper {
+                position: relative;
+                width: 80%;
+                max-width: 500px;
+
+                &::after {
+                    content: $glass;
+                    position: absolute;
+                    width: 2.5rem;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                }
+            }
+            &__option-wrapper {
+                width: 150px;
+                option{
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .cards {
+        &__list {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            padding-block: 40px;
+            gap: 30px;
+        }
+        .item {
+            flex-basis: calc(33% - 20px);
+            min-width: 240px;
+            flex-grow: 0;
+            flex-shrink: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: rgba(245, 245, 220, 0.11);
+            padding: 13px 8px;
+            border-radius: 1px;
+            box-shadow: 1px 1px 3px 0px black;
+            transition: all .4s ease;
+            opacity: .7;
+            border: 1px solid $main;
+            cursor: pointer;
+@media (max-width:819px){
+    flex-basis: calc(50% - 15px);
+}
+            @media (max-width:547px){
+                flex-grow: 1;
+            }
+            &:hover{
+                background-color: rgba(245, 245, 220, 0.548);
+                color: black;
+                opacity: 1;
+                transform: scale(1.03);
+            }
+            &__img {
+                width: 100%;
+                height: 340px;
+                object-fit: cover;
+                object-position: top;
+                margin-bottom: 10px;
+            }
+            &__name {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+
+            &__author {
+                font-size: 1.7rem;
+            }
+
+            &__price {
+                font-size: 2.4rem;
+                &::after {
+                    content: "$";
+                }
+            }
+
+            &__btn {
+                float: right;
+            }
+        }
+    }
+}

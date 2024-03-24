@@ -1,0 +1,20 @@
+::-webkit-scrollbar {
+    width: 12px; /* Ширина скроллбара */
+}
+
+::-webkit-scrollbar-track {
+    background-color: $secondary; /* Цвет фона дорожки скроллбара */
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: $main; /* Цвет самого скроллбара */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: $accentA; /* Цвет скроллбара при наведении */
+}
+body {
+    scrollbar-width: thin; /* Ширина скроллбара */
+    scrollbar-color: $secondary $main; /* Цвет скроллбара и дорожки */
+}

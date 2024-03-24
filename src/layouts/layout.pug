@@ -1,0 +1,30 @@
+block variables
+    include ../includes/vars/vars
+block mixins 
+    include ../includes/mixins/mixin
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        block link
+            link(rel="stylesheet", href="styles/style.css")
+        title=title
+    body 
+    
+        block header 
+            if header 
+                header 
+            else 
+                include ../includes/header/header
+
+        main
+            block content 
+
+        block footer 
+            if footer 
+                footer 
+            else 
+                include ../includes/footer/footer
+        block scripts 
+                    

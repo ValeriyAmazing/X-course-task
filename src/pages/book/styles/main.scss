@@ -1,0 +1,71 @@
+.book {
+    &__container {
+        padding-block: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 25px;
+
+        .detail {
+            display: flex;
+            flex: 2 1 auto;
+            gap: 20px;
+
+            &__img {
+                width: 230px;
+                height: 360px;
+                object-fit: cover;
+                object-position: center;
+                float: left;
+            }
+
+            .inner-detail{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                &__name{
+                    font-size: 2rem;
+                    font-weight: 500;
+                }
+
+                &__author{
+                    font-size: 1.7rem;
+                }
+
+                &__level, &__tags{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex: 1 1 300px;
+            // background-color: wheat;
+
+            &__inner-wrapper {
+                display: flex;
+                justify-content: space-between;
+                font-size: 1.7rem;
+
+                input {
+                    max-width: 60px;
+                    text-align: center;
+                }
+            }
+            &__btn{
+                align-self: flex-end;
+            }
+        }
+        .description {
+            width: 100%;
+            font-size: 1.6rem;
+            text-align: justify;
+            text-indent: 30px;
+            line-height: 140%;
+        }
+    }
+}
