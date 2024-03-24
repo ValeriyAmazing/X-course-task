@@ -22,7 +22,7 @@
 
         .item {
             display: flex;
-            gap: 30px;
+            gap: 12px;
             justify-content: space-between;
             background: rgba(255, 255, 255, 0.171);
             padding: 15px 20px;
@@ -53,6 +53,8 @@
             }
 
             &__total {
+                flex-basis: 50px;
+                text-align: right;
                 &::after {
                     content: "$";
                 }

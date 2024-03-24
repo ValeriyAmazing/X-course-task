@@ -141,7 +141,7 @@ body {
 }
 .cart .list .item {
   display: flex;
-  gap: 30px;
+  gap: 12px;
   justify-content: space-between;
   background: rgba(255, 255, 255, 0.171);
   padding: 15px 20px;
@@ -167,6 +167,10 @@ body {
 }
 .cart .list .item__count {
   flex: 1 0 auto;
+}
+.cart .list .item__total {
+  flex-basis: 50px;
+  text-align: right;
 }
 .cart .list .item__total::after {
   content: "$";
