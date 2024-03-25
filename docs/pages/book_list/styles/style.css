@@ -46,9 +46,7 @@ body {
 }
 
 main {
-  margin-top: 8rem;
-  flex: 1 1 100px;
-  min-height: 400px;
+  flex: 1 1 350px;
   background: rgb(17, 0, 24);
   background: linear-gradient(90deg, rgb(54, 26, 42) 0%, rgb(47, 27, 51) 44%, rgb(54, 26, 42) 100%);
 }
@@ -226,7 +224,7 @@ body {
 }
 
 .header {
-  position: fixed;
+  position: relative;
   z-index: 10;
   width: 100%;
   background-color: rgb(54, 26, 42);
