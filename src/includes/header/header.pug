@@ -1,11 +1,11 @@
 header.header
-    .header__container.container 
-        nav.header__nav.nav
+    .container 
+        nav.nav
             a.nav__logo(href="/")= mainTitle
-            .nav__controls.controls
-                button.controls__basket-btn 
-                    +svgCart('#fff').controls__basket__img
-                button.controls__btn.btn Sign Out
-                a(href="#").controls__user.user 
+            .controls
+                button.basket-btn 
+                    +svgCart('#fff')
+                button Sign Out
+                a(href="#").user 
                     img(src="../../img/avatar.webp").user__img 
                     .user__name Username

@@ -2,41 +2,55 @@
     position: relative;
     z-index: 10;
     background-color: $main;
-    padding-block: 15px;
     font-size: 2.3rem;
-    box-shadow: 0px .4px 2px $accent;
+    box-shadow: 0px 0.4px 2px $accent;
 
-    .nav, .controls, .user {
+    .nav,
+    .controls,
+    .user {
         display: flex;
         align-items: center;
-
     }
 
-    .nav{
+    .nav {
         flex-wrap: wrap;
         justify-content: space-between;
+        min-height: 8rem;
+
+        &__logo{
+            font-size: 2.2rem;
+            font-weight: 400;
+        }
     }
 
-    .controls{
+    .controls {
         gap: 20px;
+        @media (max-width: 682px) {
+            display: none;
+        }
 
-        &__basket-btn {
-            width: 35px;
-            height: 35px;
+        .basket-btn {
             background: transparent;
             border: none;
-            cursor: pointer;
-            &:hover{
+            box-shadow: none;
+
+            &:hover {
                 transition: 4.5s ease all;
-                path{fill: $accentA;}
+                path {
+                    fill: $accentA;
+                }
+            }
+            svg{
+                width: 35px;
+                height: 35px;
             }
         }
 
-        .user{
+        .user {
             gap: 10px;
             font-size: 1.7rem;
 
-            &__img{
+            &__img {
                 width: 40px;
                 height: 40px;
                 border: solid 3px black;

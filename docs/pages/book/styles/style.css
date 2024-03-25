@@ -57,7 +57,7 @@ main {
   margin: 0 auto;
 }
 
-.btn {
+button {
   position: relative;
   background-color: rgb(247, 233, 243);
   color: rgb(49, 49, 49);
@@ -69,7 +69,7 @@ main {
   box-shadow: 0.1px 0.1px 2px black;
   text-align: center;
 }
-.btn:hover {
+button:hover {
   cursor: pointer;
   background-color: rgb(241, 218, 113);
 }
@@ -119,63 +119,72 @@ body {
   scrollbar-color: rgb(47, 27, 51) rgb(54, 26, 42); /* Цвет скроллбара и дорожки */
 }
 
-.book__container {
+.book__wrapper {
   padding-block: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 25px;
+  gap: 2.5rem;
 }
-.book__container .detail {
+.book__wrapper .detail {
   display: flex;
-  flex: 2 1 auto;
-  gap: 20px;
+  flex: 1 1 60%;
+  gap: 2rem;
 }
-.book__container .detail__img {
-  width: 230px;
-  height: 360px;
+@media (max-width: 599px) {
+  .book__wrapper .detail {
+    flex-wrap: wrap;
+  }
+}
+.book__wrapper .detail__img {
+  flex: 0 1 260px;
+  height: 400px;
   object-fit: cover;
-  object-position: center;
-  float: left;
+  object-position: top;
 }
-.book__container .detail .inner-detail {
+.book__wrapper .detail .inner-detail {
   display: flex;
+  flex: 1 1 300px;
   flex-direction: column;
-  gap: 15px;
+  gap: 1.5rem;
 }
-.book__container .detail .inner-detail__name {
-  font-size: 2rem;
+.book__wrapper .detail .inner-detail__name {
+  font-size: 2.3rem;
   font-weight: 500;
 }
-.book__container .detail .inner-detail__author {
+.book__wrapper .detail .inner-detail__author {
+  font-size: 2rem;
+}
+.book__wrapper .detail .inner-detail__level, .book__wrapper .detail .inner-detail__tags {
   font-size: 1.7rem;
 }
-.book__container .detail .inner-detail__level, .book__container .detail .inner-detail__tags {
-  font-size: 1.5rem;
-}
-.book__container .form {
+.book__wrapper .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2rem;
   flex: 1 1 300px;
+  align-self: start;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: rgba(245, 222, 179, 0.096);
 }
-.book__container .form__inner-wrapper {
+.book__wrapper .form__wrapper {
   display: flex;
   justify-content: space-between;
   font-size: 1.7rem;
 }
-.book__container .form__inner-wrapper input {
-  max-width: 60px;
-  text-align: center;
-}
-.book__container .form__btn {
+.book__wrapper .form__btn {
   align-self: flex-end;
 }
-.book__container .description {
+.book__wrapper .form__input {
+  max-width: 8rem;
+  text-align: right;
+  background-color: rgba(255, 255, 255, 0.0196078431);
+}
+.book__wrapper .description {
   width: 100%;
   font-size: 1.6rem;
   text-align: justify;
-  text-indent: 30px;
   line-height: 140%;
 }
 
@@ -183,33 +192,46 @@ body {
   position: relative;
   z-index: 10;
   background-color: rgb(54, 26, 42);
-  padding-block: 15px;
   font-size: 2.3rem;
   box-shadow: 0px 0.4px 2px rgb(247, 233, 243);
 }
-.header .nav, .header .controls, .header .user {
+.header .nav,
+.header .controls,
+.header .user {
   display: flex;
   align-items: center;
 }
 .header .nav {
   flex-wrap: wrap;
   justify-content: space-between;
+  min-height: 8rem;
+}
+.header .nav__logo {
+  font-size: 2.2rem;
+  font-weight: 400;
 }
 .header .controls {
   gap: 20px;
 }
-.header .controls__basket-btn {
-  width: 35px;
-  height: 35px;
+@media (max-width: 682px) {
+  .header .controls {
+    display: none;
+  }
+}
+.header .controls .basket-btn {
   background: transparent;
   border: none;
-  cursor: pointer;
+  box-shadow: none;
 }
-.header .controls__basket-btn:hover {
+.header .controls .basket-btn:hover {
   transition: 4.5s ease all;
 }
-.header .controls__basket-btn:hover path {
+.header .controls .basket-btn:hover path {
   fill: rgb(241, 218, 113);
+}
+.header .controls .basket-btn svg {
+  width: 35px;
+  height: 35px;
 }
 .header .controls .user {
   gap: 10px;
@@ -228,12 +250,12 @@ body {
   font-weight: 300;
   box-shadow: 0px -0.4px 2px rgb(247, 233, 243);
 }
-.footer .inner {
+.footer__wrapper {
   min-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.footer p {
+.footer__text {
   text-align: center;
 }

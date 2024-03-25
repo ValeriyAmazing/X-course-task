@@ -4,13 +4,15 @@
     font-weight: 300;
     // border-top: 1px solid $accentB;
     box-shadow: 0px -.4px 2px $accent;
-    .inner {
+
+    &__wrapper {
         min-height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    p {
+    
+    &__text {
         text-align: center;
     }
 }

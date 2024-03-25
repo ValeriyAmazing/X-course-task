@@ -1,40 +1,44 @@
 .book {
-    &__container {
+    &__wrapper {
         padding-block: 30px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 25px;
+        gap: 2.5rem;
 
         .detail {
             display: flex;
-            flex: 2 1 auto;
-            gap: 20px;
+            flex: 1 1 60%;
+            gap: 2rem;
+
+            @media (max-width:599px){
+                flex-wrap: wrap;
+            }
 
             &__img {
-                width: 230px;
-                height: 360px;
+                flex: 0 1 260px;
+                height: 400px;
                 object-fit: cover;
-                object-position: center;
-                float: left;
+                object-position: top;
             }
 
             .inner-detail{
                 display: flex;
+                flex: 1 1 300px;
                 flex-direction: column;
-                gap: 15px;
+                gap: 1.5rem;
 
                 &__name{
-                    font-size: 2rem;
+                    font-size: 2.3rem;
                     font-weight: 500;
                 }
 
                 &__author{
-                    font-size: 1.7rem;
+                    font-size: 2rem;
                 }
 
                 &__level, &__tags{
-                    font-size: 1.5rem;
+                    font-size: 1.7rem;
                 }
             }
         }
@@ -42,29 +46,34 @@
         .form {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 2rem;
             flex: 1 1 300px;
-            // background-color: wheat;
+            align-self: start;
+            padding: 8px;
+            border-radius: 4px;
+            background-color: rgba(245, 222, 179, 0.096);
 
-            &__inner-wrapper {
+            &__wrapper {
                 display: flex;
                 justify-content: space-between;
                 font-size: 1.7rem;
 
-                input {
-                    max-width: 60px;
-                    text-align: center;
-                }
             }
             &__btn{
                 align-self: flex-end;
             }
+
+            &__input {
+                max-width: 8rem;
+                text-align: right;
+                background-color: #ffffff05;
+            }
         }
+
         .description {
             width: 100%;
             font-size: 1.6rem;
             text-align: justify;
-            text-indent: 30px;
             line-height: 140%;
         }
     }

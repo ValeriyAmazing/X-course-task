@@ -22,7 +22,7 @@
             }
             &__option-wrapper {
                 width: 150px;
-                option{
+                option {
                     text-align: center;
                 }
             }
@@ -49,22 +49,25 @@
             padding: 13px 8px;
             border-radius: 1px;
             box-shadow: 1px 1px 3px 0px black;
-            transition: all .4s ease;
-            opacity: .7;
+            transition: all 0.4s ease;
+            opacity: 0.7;
             border: 1px solid $main;
             cursor: pointer;
-@media (max-width:819px){
-    flex-basis: calc(50% - 15px);
-}
-            @media (max-width:547px){
+
+            @media (max-width: 819px) {
+                flex-basis: calc(50% - 15px);
+            }
+            @media (max-width: 547px) {
                 flex-grow: 1;
             }
-            &:hover{
+
+            &:hover {
                 background-color: rgba(245, 245, 220, 0.548);
                 color: black;
                 opacity: 1;
                 transform: scale(1.03);
             }
+
             &__img {
                 width: 100%;
                 height: 340px;
@@ -72,6 +75,7 @@
                 object-position: top;
                 margin-bottom: 10px;
             }
+            
             &__name {
                 font-size: 2rem;
                 margin-bottom: 10px;

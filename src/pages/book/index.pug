@@ -1,29 +1,29 @@
 extends ../../layouts/layout
 block content
     section.book 
-        .book__container.container
-            .book__detail.detail 
+        .book__wrapper.container
+            .detail 
                 img.detail__img(src="../../img/cover.webp", alt="Book name")
-                .detail__inner.inner-detail
-                    p.inner-detail__name Book name 
+                .inner-detail
+                    p.inner-detail__name Book Loooooong Loooooong Name
                     p.inner-detail__author John Dou 
                     p.inner-detail__level Beginner 
                     .inner-detail__tags 
                         a(href="#") #book-tag
-                        a(href="#")  #book-tag
-                        a(href="#")  #book-tag
+                        a(href="#") #book-tag
+                        a(href="#") #book-tag
 
-            form.book__form.form(action="/") 
-                .form__inner-wrapper 
+            form.form(action="/") 
+                .form__wrapper 
                     p.form__text Price, $
                     p.form__text#price 17
-                .form__inner-wrapper 
+                .form__wrapper 
                     p.form__text Count
-                    input(type="number", name="count" id="count" value="1")
-                .form__inner-wrapper
-                    p.form__text Total price
+                    input.form__input(type="number", name="count" id="count" value="1")
+                .form__wrapper
+                    p.form__text Total price:
                     p.form__text#total-price 51
-                button.form__btn.btn(type="submit") Add to cart 
-            .book__description.description 
+                button.form__btn(type="submit") Add to cart 
+            .description 
                 p.description__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos unde, natus nobis magnam, dolorem alias aliquam ea, quidem quae optio ullam hic inventore rerum autem? Suscipit est neque ipsum delectus!
 

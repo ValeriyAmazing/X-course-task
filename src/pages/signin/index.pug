@@ -3,12 +3,12 @@ extends ../../layouts/layout
 block content
     section.auth
         .auth__container.container
-            form.auth__form.form(action="/") 
+            form.form(action="/") 
                 .form__input-wrapper
                     label.form__label(for="name") Username
                     input.form__input(type="text" id="name")
                 .form__input-wrapper
                     label.form__label(for="password") Password
                     input.form__input(type="password" id="password")
-                button.form__btn.btn(type="submit") Log in
+                button.form__btn(type="submit") Log in
 
