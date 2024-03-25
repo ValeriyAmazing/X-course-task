@@ -5,7 +5,7 @@ block content
             .search
                 form.form(action="/") 
                     .form__search-wrapper 
-                        input(type="search", name="search" id="search")
+                        input(type="text", name="search" id="search")
                     .form__option-wrapper 
                         select(name="category")
                             option(value="price") Price
@@ -13,9 +13,10 @@ block content
                             option(value="year") Year
             .cards 
                 ul.cards__list
-                    for book in [{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'}]
+                    for book in [{name:'bookname', author:'authorBook',img:'../../img/cover2.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover2.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover1.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover1.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'}]
                         li.item
-                            img.item__img(src=book.img, alt="")
+                            .item__img-wrapper
+                                img.item__img(src=book.img, alt="")
                             p.item__name= book.name
                             p.item__author= book.author 
                             .item__bottom-wrapper

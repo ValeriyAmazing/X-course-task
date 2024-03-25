@@ -15,9 +15,18 @@
                 flex-wrap: wrap;
             }
 
+            &__img-wrapper{
+                position: relative;
+                width: 40%;
+                padding-top: 65%;
+            }
+
             &__img {
-                flex: 0 1 260px;
-                height: 400px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
                 object-fit: cover;
                 object-position: top;
             }
@@ -67,6 +76,10 @@
                 max-width: 8rem;
                 text-align: right;
                 background-color: #ffffff05;
+                color: white;
+                font-size: 1.7rem;
+                font-weight: 300;
+
             }
         }
 
