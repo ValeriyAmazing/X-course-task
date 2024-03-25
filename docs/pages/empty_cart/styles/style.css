@@ -46,8 +46,9 @@ body {
 }
 
 main {
-  padding-top: 8rem;
+  margin-top: 8rem;
   flex: 1 1 100px;
+  min-height: 400px;
   background: rgb(17, 0, 24);
   background: linear-gradient(90deg, rgb(54, 26, 42) 0%, rgb(47, 27, 51) 44%, rgb(54, 26, 42) 100%);
 }
@@ -124,6 +125,7 @@ body {
   height: 100%;
 }
 .cart__contianer {
+  position: relative;
   padding-block: 25px;
   display: flex;
   flex-direction: column;
