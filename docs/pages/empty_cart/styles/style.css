@@ -150,8 +150,9 @@ body {
 }
 
 .header {
-  position: relative;
+  position: fixed;
   z-index: 10;
+  width: 100%;
   background-color: rgb(54, 26, 42);
   font-size: 2.3rem;
   box-shadow: 0px 0.4px 2px rgb(247, 233, 243);
@@ -171,38 +172,123 @@ body {
   font-size: 2.2rem;
   font-weight: 400;
 }
-.header .controls {
-  gap: 20px;
+.header .nav label {
+  position: relative;
+  display: none;
+  background-color: transparent;
+  width: 29px;
+  height: 29px;
 }
-@media (max-width: 682px) {
-  .header .controls {
-    display: none;
+@media (max-width: 819px) {
+  .header .nav label {
+    display: block;
   }
 }
-.header .controls .basket-btn {
+.header .nav label span {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(247, 233, 243);
+  transition: all 0.5s ease;
+}
+.header .nav label span:nth-child(1) {
+  top: 6px;
+}
+.header .nav label span:nth-child(3) {
+  top: 22px;
+}
+.header .nav input {
+  display: none;
+}
+.header .nav input:checked ~ #controls {
+  height: 200px;
+  padding: 20px;
+}
+.header .nav input:checked ~ label span:nth-child(1) {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+.header .nav input:checked ~ label span:nth-child(2) {
+  opacity: 0;
+}
+.header .nav input:checked ~ label span:nth-child(3) {
+  transform: rotate(45deg);
+  top: 50%;
+}
+.header .nav .controls {
+  gap: 20px;
+}
+@media (max-width: 819px) {
+  .header .nav .controls {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    overflow-y: hidden;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgb(54, 26, 42) 0%, rgb(47, 27, 51) 100%);
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 1px 2px 0px black;
+    transition: all 0.3s ease;
+  }
+}
+.header .nav .controls .basket-btn {
   background: transparent;
+  padding: 0;
   border: none;
   box-shadow: none;
 }
-.header .controls .basket-btn:hover {
+@media (max-width: 819px) {
+  .header .nav .controls .basket-btn {
+    order: 2;
+  }
+}
+.header .nav .controls .basket-btn:hover {
   transition: 4.5s ease all;
 }
-.header .controls .basket-btn:hover path {
+.header .nav .controls .basket-btn:hover path {
   fill: rgb(241, 218, 113);
 }
-.header .controls .basket-btn svg {
+.header .nav .controls .basket-btn svg {
   width: 35px;
   height: 35px;
 }
-.header .controls .user {
+@media (max-width: 819px) {
+  .header .nav .controls .sign-btn {
+    order: 3;
+  }
+}
+.header .nav .controls .user {
   gap: 10px;
   font-size: 1.7rem;
 }
-.header .controls .user__img {
+@media (max-width: 819px) {
+  .header .nav .controls .user {
+    order: 1;
+  }
+}
+.header .nav .controls .user__img {
   width: 40px;
   height: 40px;
   border: solid 3px black;
   border-radius: 50%;
+}
+.header .nav .controls .user__name {
+  width: 15ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 819px) {
+  .header .nav .controls .user__name {
+    width: 100%;
+  }
 }
 
 .footer {

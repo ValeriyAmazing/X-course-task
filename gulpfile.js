@@ -5,22 +5,22 @@ const connect = require("gulp-connect");
 const sass = require("gulp-sass")(require("sass"));
 const del = require("del");
 
-gulp.task("clean-dist", function () {
-  return del(["dist/**/*"]); 
+gulp.task("clean-docs", function () {
+  return del(["docs/**/*"]); 
 });
 
 gulp.task("convert-images", function () {
   return gulp
     .src("./src/**/*.{png,jpg,jpeg,webp}")
     .pipe(webp())
-    .pipe(gulp.dest("dist"));
+    .pipe(gulp.dest("docs"));
 });
 
 gulp.task("compile-pug", function () {
   return gulp
     .src("./src/**/index.pug")
     .pipe(pug({ pretty: true }))
-    .pipe(gulp.dest("dist"))
+    .pipe(gulp.dest("docs"))
     .pipe(connect.reload());
 });
 
@@ -29,32 +29,32 @@ gulp.task("compile-sass", function () {
   return gulp
     .src(["./src/**/style.scss"])
     .pipe(sass({ outputStyle: "expanded" }))
-    .pipe(gulp.dest("dist"))
+    .pipe(gulp.dest("docs"))
     .pipe(connect.reload());
 });
 
 gulp.task("move-svg", function () {
   return gulp
     .src(["./src/**/*.svg"]) 
-    .pipe(gulp.dest("dist"));
+    .pipe(gulp.dest("docs"));
 });
 
 // gulp.task("move-css", function () {
 //     return gulp
 //       .src(["./src/**/style.css"]) 
-//       .pipe(gulp.dest("dist"));
+//       .pipe(gulp.dest("docs"));
 //   });
 
 // gulp.task("move-fonts", function () {
 //   return gulp
 //     .src("./src/**/*.{woff,woff2,ttf}") 
-//     .pipe(gulp.dest("dist")); 
+//     .pipe(gulp.dest("docs")); 
 // });
 
 // gulp.task("move-scripts", function () {
 //     return gulp
 //       .src("./src/**/*.js") 
-//       .pipe(gulp.dest("dist")); 
+//       .pipe(gulp.dest("docs")); 
 //   });
 
 gulp.task("watch", function (done) {
@@ -70,7 +70,7 @@ gulp.task("watch", function (done) {
 
 gulp.task("connect", function (done) {
   connect.server({
-    root: "dist",
+    root: "docs",
     livereload: true,
   });
   done()
@@ -79,7 +79,7 @@ gulp.task("connect", function (done) {
 gulp.task(
   "dev",
   gulp.series(
-    "clean-dist",
+    "clean-docs",
     "move-svg",
     "convert-images",
     "compile-pug",

@@ -36,18 +36,18 @@
             justify-content: flex-start;
             flex-wrap: wrap;
             padding-block: 40px;
-            gap: 30px;
+            column-gap: 2%;
+            row-gap: 15px;
         }
         .item {
-            flex-basis: calc(33% - 20px);
-            min-width: 240px;
+            flex-basis: 23.5%;
             flex-grow: 0;
             flex-shrink: 1;
             display: flex;
             flex-direction: column;
             gap: 20px;
             background-color: rgba(245, 245, 220, 0.11);
-            padding: 13px 8px;
+            padding: 13px;
             border-radius: 1px;
             box-shadow: 1px 1px 3px 0px black;
             transition: all 0.4s ease;
@@ -55,8 +55,11 @@
             border: 1px solid $main;
             cursor: pointer;
 
+            @media(max-width:1062px){
+                flex-basis: 32%;
+            }
             @media (max-width: 819px) {
-                flex-basis: calc(50% - 15px);
+                flex-basis: calc(49%);
             }
             @media (max-width: 547px) {
                 flex-grow: 1;
@@ -73,7 +76,6 @@
                 position: relative;
                 width: 100%;
                 padding-top: 160%;
-                // overflow: hidden;
             }
             &__img {
                 position: absolute;
