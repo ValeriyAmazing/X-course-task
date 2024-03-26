@@ -1,20 +1,20 @@
 ::-webkit-scrollbar {
-    width: 12px; /* Ширина скроллбара */
+    width: 5px; /* Ширина скроллбара */
 }
 
 ::-webkit-scrollbar-track {
-    background-color: $secondary; /* Цвет фона дорожки скроллбара */
+    background-color: $main; /* Цвет фона дорожки скроллбара */
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 2px;
-    background-color: $main; /* Цвет самого скроллбара */
+    border-radius: 4px;
+    background-color: $accent; /* Цвет самого скроллбара */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: $accentA; /* Цвет скроллбара при наведении */
+    background-color: $accentA;
 }
 body {
     scrollbar-width: thin; /* Ширина скроллбара */
-    scrollbar-color: $secondary $main; /* Цвет скроллбара и дорожки */
+    scrollbar-color: $accentA $main; /* Цвет скроллбара и дорожки */
 }
