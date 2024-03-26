@@ -10,7 +10,7 @@
   const description = document.querySelector(".description__text");
 
   window.onload = async function () {
-    const { books } = await fetch("books.json").then((response) =>
+    const { books } = await fetch("../../books.json").then((response) =>
       response.json(),
     );
     const book = books[(Math.random() * books.length) | 0];
@@ -34,12 +34,15 @@
   };
 
   count.oninput = (e) => {
-    if (count.value > 0 && count.value < 43)
-      total.innerText = count.value * price.innerText;
+    function setTotal(){
+      total.innerText = (count.value * price.innerText).toFixed(2);
+    }
+    if (count.value >= 0 && count.value < 43)
+    setTotal()
     else {
       alert("You entered incorrect values");
       count.value = 1;
-      total.innerText = count.value * price.innerText;
+      setTotal()
     }
   };
 })();

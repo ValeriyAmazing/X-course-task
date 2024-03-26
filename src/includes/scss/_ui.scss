@@ -16,12 +16,18 @@ button{
         background-color: $accentA;
     }
 }
+button:disabled{
+    background: #74715d;
+    color: rgb(2, 2, 2);
+    cursor: default;
+}
 
 input, select {
     padding: 4px 7px;
     width: 100%;
     height: 3.5rem;
-    // font-size: inherit;
+    line-height: 3.5rem;
+    font-weight: 500;
     font-family: inherit;
     border: none;
     border-radius: 3px;

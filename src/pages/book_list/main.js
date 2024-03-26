@@ -31,16 +31,17 @@
 //   };
 
   async function filter() {
-    const { books } = await fetch("books.json").then((response) =>
+    const { books } = await fetch("../../books.json").then((response) =>
       response.json(),
     );
     const option = options.value;
+    
     list.innerHTML =
       books
         .filter(
           (item) =>
-            item.title.toLowerCase().includes(search.value.trim()) ||
-            item.author.toLowerCase().includes(search.value.trim()),
+            item.title.toLowerCase().includes(search.value.toLowerCase().trim()) ||
+            item.author.toLowerCase().includes(search.value.toLowerCase().trim()),
         )
         .sort((a, b) => {
           if (typeof a[option] === "number") {

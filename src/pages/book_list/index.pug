@@ -7,8 +7,9 @@ block content
             .search
                 form.form(action="/") 
                     .form__search-wrapper 
-                        input(type="text", name="search" id="search")
+                        input(type="search", name="search" id="search")
                     .form__option-wrapper 
+                        label(for="category") Sort by:
                         select(name="category" id="category")
                             option(value="price") Price
                             option(value="author") Author 
