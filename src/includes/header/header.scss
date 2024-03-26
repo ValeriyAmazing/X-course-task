@@ -20,7 +20,7 @@
 
         &__logo {
             font-size: 2.2rem;
-            font-weight: 400;
+            font-weight: 500;
         }
 
         label {
@@ -29,7 +29,7 @@
             background-color: transparent;
             width: 29px;
             height: 29px;
-            @media (max-width: 819px) {
+            @media (max-width: 600px) {
                 display: block;
             }
             span {
@@ -79,7 +79,7 @@
         .controls {
             gap: 20px;
 
-            @media (max-width: 819px) {
+            @media (max-width: 600px) {
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -101,7 +101,7 @@
                 padding: 0;
                 border: none;
                 box-shadow: none;
-                @media (max-width: 819px) {
+                @media (max-width: 600px) {
                     order: 2;
                 }
                 &:hover {
@@ -118,7 +118,7 @@
             }
 
             .sign-btn {
-                @media (max-width: 819px) {
+                @media (max-width: 600px) {
                     order: 3;
                 }
             }
@@ -126,7 +126,7 @@
                 gap: 10px;
                 font-size: 1.7rem;
 
-                @media (max-width: 819px) {
+                @media (max-width: 600px) {
                     order: 1;
                 }
 
@@ -142,7 +142,7 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
 
-                    @media (max-width: 819px) {
+                    @media (max-width: 600px) {
                         width: 100%;
                     }
                 }

@@ -51,11 +51,11 @@ gulp.task("move-svg", function () {
 //     .pipe(gulp.dest("docs")); 
 // });
 
-// gulp.task("move-scripts", function () {
-//     return gulp
-//       .src("./src/**/*.js") 
-//       .pipe(gulp.dest("docs")); 
-//   });
+gulp.task("move-files", function () {
+    return gulp
+      .src("./src/**/*.{js,json}") 
+      .pipe(gulp.dest("docs")); 
+  });
 
 gulp.task("watch", function (done) {
   gulp.watch("src/**/*.pug", gulp.series("compile-pug"));
@@ -63,7 +63,7 @@ gulp.task("watch", function (done) {
   gulp.watch("src/**/*.svg", gulp.series("move-svg"));
   gulp.watch("src/**/*.scss", gulp.series("compile-sass"));
 //   gulp.watch("src/**/*.{woff,woff2,ttf}", gulp.series("move-fonts"));
-//   gulp.watch("src/**/*.js", gulp.series("move-scripts"));
+  gulp.watch("src/**/*.{js,json}", gulp.series("move-files"));
   // gulp.watch("src/**/*.css", gulp.series("move-css"));
   done()
 });
@@ -85,7 +85,7 @@ gulp.task(
     "compile-pug",
     "compile-sass",
     // "move-fonts",
-    // "move-scripts",
+    "move-files",
     // "move-css",
     gulp.parallel("watch", "connect")
   )

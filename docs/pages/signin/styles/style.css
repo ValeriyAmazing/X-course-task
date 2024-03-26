@@ -33,11 +33,6 @@ html {
     font-size: 8px;
   }
 }
-@media (max-width: 500px) {
-  html {
-    font-size: 7px;
-  }
-}
 
 body {
   display: flex;
@@ -174,7 +169,7 @@ body {
 }
 .header .nav__logo {
   font-size: 2.2rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 .header .nav label {
   position: relative;
@@ -183,7 +178,7 @@ body {
   width: 29px;
   height: 29px;
 }
-@media (max-width: 819px) {
+@media (max-width: 600px) {
   .header .nav label {
     display: block;
   }
@@ -225,7 +220,7 @@ body {
 .header .nav .controls {
   gap: 20px;
 }
-@media (max-width: 819px) {
+@media (max-width: 600px) {
   .header .nav .controls {
     position: absolute;
     top: 100%;
@@ -249,7 +244,7 @@ body {
   border: none;
   box-shadow: none;
 }
-@media (max-width: 819px) {
+@media (max-width: 600px) {
   .header .nav .controls .basket-btn {
     order: 2;
   }
@@ -264,7 +259,7 @@ body {
   width: 35px;
   height: 35px;
 }
-@media (max-width: 819px) {
+@media (max-width: 600px) {
   .header .nav .controls .sign-btn {
     order: 3;
   }
@@ -273,7 +268,7 @@ body {
   gap: 10px;
   font-size: 1.7rem;
 }
-@media (max-width: 819px) {
+@media (max-width: 600px) {
   .header .nav .controls .user {
     order: 1;
   }
@@ -289,7 +284,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media (max-width: 819px) {
+@media (max-width: 600px) {
   .header .nav .controls .user__name {
     width: 100%;
   }

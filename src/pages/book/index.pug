@@ -1,4 +1,6 @@
 extends ../../layouts/layout
+block scripts 
+    script(src="main.js")
 block content
     section.book 
         .book__wrapper.container
@@ -14,7 +16,7 @@ block content
                         a(href="#") #book-tag
                         a(href="#") #book-tag
 
-            form.form(action="/") 
+            form.form#form(action="/") 
                 .form__wrapper 
                     p.form__text Price, $
                     p.form__text#price 17

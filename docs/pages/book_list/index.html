@@ -9,7 +9,9 @@
   <body> 
     <header class="header">
       <div class="container"> 
-        <nav class="nav"><a class="nav__logo" href="/">JS BAND STORE / Valerii Kartashov</a>
+        <nav class="nav"><a class="nav__logo" href="../"> 
+            <p>JS BAND STORE</p>
+            <p style="font-size:1.5rem; font-weight: 400;">by Valerii Kartashov</p></a>
           <input type="checkbox" name="burger" id="burger">
           <label for="burger"> <span> </span><span> </span><span> </span></label>
           <div class="controls" id="controls">
@@ -33,16 +35,16 @@
                 <input type="text" name="search" id="search">
               </div>
               <div class="form__option-wrapper"> 
-                <select name="category">
+                <select name="category" id="category">
                   <option value="price">Price</option>
                   <option value="author">Author </option>
-                  <option value="year">Year</option>
+                  <option value="title">Title</option>
                 </select>
               </div>
             </form>
           </div>
           <div class="cards"> 
-            <ul class="cards__list">
+            <ul class="cards__list" id="list">
               <li class="item">
                 <div class="item__img-wrapper"><img class="item__img" src="../../img/cover2.webp" alt=""></div>
                 <p class="item__name">bookname</p>
@@ -117,5 +119,6 @@
         <p class="footer__text">Designed and Developed by Valerii Kartashov. © 2024 </p>
       </div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>

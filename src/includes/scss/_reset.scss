@@ -31,9 +31,9 @@ html {
         font-size: 8px;
     }
 
-    @media (max-width: 500px) {
-        font-size: 7px;
-    }
+    // @media (max-width: 500px) {
+    //     font-size: 7px;
+    // }
 }
 
 body {
@@ -43,7 +43,6 @@ body {
 }
 
 main {
-    // margin-top: 8rem;
     flex: 1 1 350px;
     background: rgb(17, 0, 24);
     background: linear-gradient(90deg, $main 0%, $secondary 44%, $main 100%);
