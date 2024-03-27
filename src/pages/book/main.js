@@ -8,7 +8,15 @@
   const level = document.querySelector(".inner-detail__level");
   const tags = document.querySelector(".inner-detail__tags");
   const description = document.querySelector(".description__text");
+  document.getElementById("increase").addEventListener("click", () => {
+    count.value = +count.value + 1;
+    calculateTotal()
+  });
 
+  document.getElementById("dencrease").addEventListener("click", () => {
+    count.value = +count.value - 1;
+    calculateTotal()
+  });
   window.onload = async function () {
     const { books } = await fetch("../../books.json").then((response) =>
       response.json(),
@@ -33,16 +41,17 @@
     e.preventDefault();
   };
 
-  count.oninput = (e) => {
-    function setTotal(){
-      total.innerText = (count.value * price.innerText).toFixed(2);
-    }
-    if (count.value >= 0 && count.value < 43)
-    setTotal()
+  function setTotal() {
+    total.innerText = (count.value * price.innerText).toFixed(2);
+  }
+
+  function calculateTotal() {
+    if (count.value > 0 && count.value < 43) setTotal();
     else {
       alert("You entered incorrect values");
       count.value = 1;
-      setTotal()
+      setTotal();
     }
-  };
+  }
+  count.onchange = calculateTotal;
 })();

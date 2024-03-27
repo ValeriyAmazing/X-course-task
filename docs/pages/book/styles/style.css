@@ -101,6 +101,16 @@ a:hover {
   color: rgb(241, 218, 113);
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 ::-webkit-scrollbar {
   width: 5px; /* Ширина скроллбара */
 }
@@ -170,6 +180,32 @@ body {
 .book .detail .inner-detail__level, .book .detail .inner-detail__tags {
   font-size: 1.7rem;
 }
+.book .detail .inner-detail .rating {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 4rem;
+  border: none;
+  padding: 0;
+  justify-content: start;
+}
+.book .detail .inner-detail .rating input {
+  display: none;
+}
+.book .detail .inner-detail .rating input:hover ~ label, .book .detail .inner-detail .rating input:hover ~ label ~ label, .book .detail .inner-detail .rating input:checked ~ label, .book .detail .inner-detail .rating input:checked ~ label ~ label {
+  color: rgb(241, 218, 113);
+}
+.book .detail .inner-detail .rating label {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+  font-size: 4rem;
+  color: rgb(247, 233, 243);
+}
+.book .detail .inner-detail .rating label::before {
+  content: "★";
+  line-height: 4rem;
+  position: absolute;
+}
 .book .form {
   display: flex;
   flex-direction: column;
@@ -190,8 +226,8 @@ body {
   align-self: flex-end;
 }
 .book .form__input {
-  max-width: 8rem;
-  text-align: right;
+  max-width: 5rem;
+  text-align: center;
   background-color: rgba(255, 255, 255, 0.0196078431);
   color: white;
   font-size: 1.7rem;

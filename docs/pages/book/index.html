@@ -34,20 +34,36 @@
               <p class="inner-detail__author">John Dou </p>
               <p class="inner-detail__level">Beginner </p>
               <div class="inner-detail__tags"> <a href="#">#book-tag</a><a href="#">#book-tag</a><a href="#">#book-tag</a></div>
+              <fieldset class="rating"> 
+                <input type="radio" name="rating" value="5" id="stars5">
+                <label for="stars5"> </label>
+                <input type="radio" name="rating" value="4" id="stars4">
+                <label for="stars4"> </label>
+                <input type="radio" name="rating" value="3" id="stars3">
+                <label for="stars3"> </label>
+                <input type="radio" name="rating" value="2" id="stars2">
+                <label for="stars2"> </label>
+                <input type="radio" name="rating" value="1" id="stars1">
+                <label for="stars1"> </label>
+              </fieldset>
             </div>
           </div>
           <form class="form" id="form" action="/"> 
             <div class="form__wrapper"> 
               <p class="form__text">Price, $</p>
-              <p class="form__text" id="price">17</p>
+              <p class="form__value" id="price">17</p>
             </div>
             <div class="form__wrapper"> 
               <p class="form__text">Count</p>
-              <input class="form__input" type="number" name="count" id="count" value="1">
+              <div class="form__inner-wrapper"> 
+                <button id="dencrease">-</button>
+                <input class="form__input" type="number" name="count" id="count" value="1">
+                <button id="increase">+</button>
+              </div>
             </div>
             <div class="form__wrapper">
               <p class="form__text">Total price:</p>
-              <p class="form__text" id="total-price">51</p>
+              <p class="form__value" id="total-price">51</p>
             </div>
             <button class="form__btn" type="submit">Add to cart </button>
           </form>
@@ -59,7 +75,7 @@
     </main>
     <footer class="footer">
       <div class="footer__wrapper container"> 
-        <p class="footer__text">Designed and Developed by Valerii Kartashov. © PROMETHEUS 2024 </p>
+        <p class="footer__text">Designed and Developed by Valerii Kartashov. <br>© PROMETHEUS 2024 </p>
       </div>
     </footer>
     <script src="main.js"></script>

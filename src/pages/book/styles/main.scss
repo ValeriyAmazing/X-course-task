@@ -12,11 +12,11 @@
         flex: 1 1 60%;
         gap: 2rem;
 
-        @media (max-width:599px){
+        @media (max-width: 599px) {
             flex-wrap: wrap;
         }
 
-        &__img-wrapper{
+        &__img-wrapper {
             position: relative;
             width: 40%;
             padding-top: 52%;
@@ -32,23 +32,57 @@
             object-position: center;
         }
 
-        .inner-detail{
+        .inner-detail {
             display: flex;
             flex: 1 1 300px;
             flex-direction: column;
             gap: 1.5rem;
 
-            &__name{
+            &__name {
                 font-size: 2.3rem;
                 font-weight: 500;
             }
 
-            &__author{
+            &__author {
                 font-size: 2rem;
             }
 
-            &__level, &__tags{
+            &__level,
+            &__tags {
                 font-size: 1.7rem;
+            }
+
+            .rating {
+                display: flex;
+                flex-direction: row-reverse;
+                height: 4rem;
+                border: none;
+                // background-color: aqua;
+                padding: 0;
+                justify-content: start;
+
+                input {
+                    display: none;
+                    &:hover ~ label,
+                    &:hover ~ label ~ label,
+                    &:checked ~ label,
+                    &:checked ~ label ~ label {
+                        color: $accentA;
+                    }
+                }
+
+                label {
+                    display: inline-block;
+                    position: relative;
+                    width: 1.1em;
+                    font-size: 4rem;
+                    color: $accent;
+                    &::before {
+                        content: "\2605";
+                        line-height: 4rem;
+                        position: absolute;
+                    }
+                }
             }
         }
     }
@@ -68,20 +102,19 @@
             justify-content: space-between;
             align-items: center;
             font-size: 1.7rem;
-
         }
-        &__btn{
+
+        &__btn {
             align-self: flex-end;
         }
 
         &__input {
-            max-width: 8rem;
-            text-align: right;
+            max-width: 5rem;
+            text-align: center;
             background-color: #ffffff05;
             color: white;
             font-size: 1.7rem;
             font-weight: 300;
-
         }
     }
 
