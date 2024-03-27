@@ -13,6 +13,7 @@ li {
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 html {
@@ -30,10 +31,6 @@ html {
     @media (max-width: 768px) {
         font-size: 8px;
     }
-
-    // @media (max-width: 500px) {
-    //     font-size: 7px;
-    // }
 }
 
 body {

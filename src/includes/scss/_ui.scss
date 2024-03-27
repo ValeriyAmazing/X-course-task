@@ -11,8 +11,9 @@ button{
     border: 1px transparent solid;
     box-shadow: 0.1px 0.1px 2px black;
     text-align: center;
+    cursor: pointer;
+    
     &:hover{
-        cursor: pointer;
         background-color: $accentA;
     }
 }

@@ -13,6 +13,7 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 html {
@@ -63,9 +64,9 @@ button {
   border: 1px transparent solid;
   box-shadow: 0.1px 0.1px 2px black;
   text-align: center;
+  cursor: pointer;
 }
 button:hover {
-  cursor: pointer;
   background-color: rgb(241, 218, 113);
 }
 
@@ -135,6 +136,19 @@ body {
 .cart__btn {
   align-self: flex-start;
   margin-top: 0;
+  background-color: rgb(247, 233, 243);
+  color: rgb(49, 49, 49);
+  border-radius: 3px;
+  padding: 7px 20px;
+  font-size: 1.7rem;
+  transition: 0.4s all ease;
+  border: 1px transparent solid;
+  box-shadow: 0.1px 0.1px 2px black;
+  text-align: center;
+}
+.cart__btn:hover {
+  background-color: rgb(241, 218, 113);
+  color: rgb(49, 49, 49);
 }
 .cart__inner-wrapper {
   margin: auto;
