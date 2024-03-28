@@ -43,44 +43,43 @@
 
     .cards-container {
 
-        // GRID LAYOUT
+        // FLEX LAYOUT
+
         .list {
-            display: grid;
-            grid-template-columns: repeat(5, minmax(100px, 1fr));
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
             padding-block: 40px;
-            gap: 10px;
-
-            @media (max-width: 1024px) {
-                grid-template-columns: repeat(4, minmax(100px, 1fr));
-            }
-
-            @media (max-width: 768px) {
-                grid-template-columns: repeat(3, minmax(100px, 1fr));
-            }
-
-            @media (max-width: 480px) {
-                grid-template-columns: repeat(2, minmax(100px, 1fr));
-            }
-
-            @media (max-width: 380px) {
-                grid-template-columns: repeat(1, minmax(100px, 1fr));
-            }
-
+            column-gap: 2%;
+            row-gap: 15px;
             .item {
-                grid-column-start: span 1;
+                flex-basis: 18.4%;
+                flex-grow: 0;
+                flex-shrink: 1;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                gap: 1rem;
+                gap: 15px;
                 background-color: rgba(245, 245, 220, 0.11);
-                padding: 4px 12px 12px;
+                padding: 8px 12px 12px;
                 border-radius: 1px;
                 box-shadow: 1px 1px 3px 0px black;
                 transition: all 0.4s ease;
                 opacity: 0.7;
                 border: 1px solid $main;
                 cursor: pointer;
-
+                @media (max-width: 992px) {
+                    flex-basis: 23.5%;
+                }
+                @media (max-width: 768px) {
+                    flex-basis: 32%;
+                }
+                @media (max-width: 480px) {
+                    flex-basis: 49%;
+                }
+                @media (max-width: 365px) {
+                    flex-basis: 100%;
+                }
                 &:hover {
                     background-color: rgba(245, 245, 220, 0.548);
                     color: black;
@@ -88,7 +87,6 @@
                     opacity: 1;
                     transform: scale(1.03);
                 }
-
                 &__img-wrapper {
                     position: relative;
                     width: 100%;
@@ -99,12 +97,11 @@
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    width: calc(100% + 16px);
+                    width: 104%;
                     height: 100%;
                     object-fit: cover;
                     object-position: center;
                 }
-
                 &__name {
                     font-size: 1.6rem;
                     text-transform: capitalize;
@@ -114,7 +111,6 @@
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                 }
-
                 &__author {
                     flex: 0 0 3.5rem;
                     font-size: 1.4rem;
@@ -123,18 +119,15 @@
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                 }
-
                 &__price {
-                    font-size: 2rem;
+                    font-size: 2.4rem;
                     &::after {
                         content: "$";
                     }
                 }
-
                 &__btn {
                     float: right;
                 }
-
                 &__bottom-wrapper {
                     display: flex;
                     justify-content: space-between;
@@ -142,5 +135,6 @@
                 }
             }
         }
+
     }
 }

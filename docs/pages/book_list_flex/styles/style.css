@@ -1,0 +1,465 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+@media (max-width: 1024px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 1 350px;
+  background: rgb(17, 0, 24);
+  background: linear-gradient(90deg, rgb(54, 26, 42) 0%, rgb(47, 27, 51) 44%, rgb(54, 26, 42) 100%);
+}
+
+.container {
+  max-width: 1100px;
+  padding-inline: 20px;
+  margin: 0 auto;
+}
+
+button {
+  position: relative;
+  background-color: rgb(247, 233, 243);
+  color: rgb(49, 49, 49);
+  border-radius: 3px;
+  padding: 0.4rem 2rem;
+  font-size: 1.7rem;
+  transition: 0.4s all ease;
+  border: 1px transparent solid;
+  box-shadow: 0.1px 0.1px 2px black;
+  text-align: center;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(241, 218, 113);
+}
+
+button:disabled {
+  background: #74715d;
+  color: rgb(2, 2, 2);
+  cursor: default;
+}
+
+input, select {
+  padding: 0.4rem 0.7rem;
+  width: 100%;
+  height: 3rem;
+  line-height: 3rem;
+  font-weight: 500;
+  font-family: inherit;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0.1px 0.1px 2px;
+}
+input:focus, select:focus {
+  outline: 1px solid rgb(247, 233, 243);
+}
+
+option {
+  background-color: rgb(54, 26, 42);
+  color: rgb(247, 233, 243);
+  font-size: 3rem;
+}
+
+a:hover {
+  color: rgb(241, 218, 113);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 4rem;
+  border: none;
+  padding: 0;
+  justify-content: start;
+}
+.rating input {
+  display: none;
+}
+.rating input:hover ~ label, .rating input:hover ~ label ~ label, .rating input:checked ~ label, .rating input:checked ~ label ~ label {
+  color: rgb(241, 218, 113);
+}
+.rating label {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+  font-size: 4rem;
+  color: rgb(247, 233, 243);
+}
+.rating label::before {
+  content: "★";
+  line-height: 4rem;
+  position: absolute;
+}
+
+::-webkit-scrollbar {
+  width: 5px; /* Ширина скроллбара */
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(54, 26, 42); /* Цвет фона дорожки скроллбара */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgb(247, 233, 243); /* Цвет самого скроллбара */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(241, 218, 113);
+}
+
+body {
+  scrollbar-width: thin; /* Ширина скроллбара */
+  scrollbar-color: rgb(241, 218, 113) rgb(54, 26, 42); /* Цвет скроллбара и дорожки */
+}
+
+.books-list {
+  padding-block: 22px;
+}
+.books-list .search .form {
+  display: flex;
+  gap: 10px;
+}
+.books-list .search .form__search-wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+}
+.books-list .search .form__search-wrapper input[type=search] {
+  padding-right: 50px;
+}
+.books-list .search .form__search-wrapper::after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="gray" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>');
+  position: absolute;
+  width: 2.5rem;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.books-list .search .form__option-wrapper {
+  flex: 0 1 200px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.books-list .search .form__option-wrapper label {
+  font-size: 1.4rem;
+  white-space: nowrap;
+}
+.books-list .search .form__option-wrapper option {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.books-list .cards-container .list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-block: 40px;
+  column-gap: 2%;
+  row-gap: 15px;
+}
+.books-list .cards-container .list .item {
+  flex-basis: 18.4%;
+  flex-grow: 0;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  background-color: rgba(245, 245, 220, 0.11);
+  padding: 8px 12px 12px;
+  border-radius: 1px;
+  box-shadow: 1px 1px 3px 0px black;
+  transition: all 0.4s ease;
+  opacity: 0.7;
+  border: 1px solid rgb(54, 26, 42);
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .books-list .cards-container .list .item {
+    flex-basis: 23.5%;
+  }
+}
+@media (max-width: 768px) {
+  .books-list .cards-container .list .item {
+    flex-basis: 32%;
+  }
+}
+@media (max-width: 480px) {
+  .books-list .cards-container .list .item {
+    flex-basis: 49%;
+  }
+}
+@media (max-width: 365px) {
+  .books-list .cards-container .list .item {
+    flex-basis: 100%;
+  }
+}
+.books-list .cards-container .list .item:hover {
+  background-color: rgba(245, 245, 220, 0.548);
+  color: black;
+  font-weight: 500;
+  opacity: 1;
+  transform: scale(1.03);
+}
+.books-list .cards-container .list .item__img-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 132%;
+}
+.books-list .cards-container .list .item__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 104%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.books-list .cards-container .list .item__name {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  flex: 0 0 4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.books-list .cards-container .list .item__author {
+  flex: 0 0 3.5rem;
+  font-size: 1.4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.books-list .cards-container .list .item__price {
+  font-size: 2.4rem;
+}
+.books-list .cards-container .list .item__price::after {
+  content: "$";
+}
+.books-list .cards-container .list .item__btn {
+  float: right;
+}
+.books-list .cards-container .list .item__bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: rgb(54, 26, 42);
+  font-size: 2.3rem;
+  box-shadow: 0px 0.4px 2px rgb(247, 233, 243);
+}
+.header .nav,
+.header .controls,
+.header .user {
+  display: flex;
+  align-items: center;
+}
+.header .nav {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 8rem;
+}
+.header .nav__logo {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+.header .nav label {
+  position: relative;
+  display: none;
+  background-color: transparent;
+  width: 29px;
+  height: 29px;
+}
+@media (max-width: 600px) {
+  .header .nav label {
+    display: block;
+  }
+}
+.header .nav label span {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(247, 233, 243);
+  transition: all 0.5s ease;
+}
+.header .nav label span:nth-child(1) {
+  top: 6px;
+}
+.header .nav label span:nth-child(3) {
+  top: 22px;
+}
+.header .nav input {
+  display: none;
+}
+.header .nav input:checked ~ #controls {
+  height: 200px;
+  padding: 20px;
+}
+.header .nav input:checked ~ label span:nth-child(1) {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+.header .nav input:checked ~ label span:nth-child(2) {
+  opacity: 0;
+}
+.header .nav input:checked ~ label span:nth-child(3) {
+  transform: rotate(45deg);
+  top: 50%;
+}
+.header .nav .controls {
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  .header .nav .controls {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    overflow-y: hidden;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgb(54, 26, 42) 0%, rgb(47, 27, 51) 100%);
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 1px 2px 0px black;
+    transition: all 0.3s ease;
+  }
+}
+.header .nav .controls .basket-btn {
+  background: transparent;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+@media (max-width: 600px) {
+  .header .nav .controls .basket-btn {
+    order: 2;
+  }
+}
+.header .nav .controls .basket-btn:hover {
+  transition: 4.5s ease all;
+}
+.header .nav .controls .basket-btn:hover path {
+  fill: rgb(241, 218, 113);
+}
+.header .nav .controls .basket-btn svg {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 600px) {
+  .header .nav .controls .sign-btn {
+    order: 3;
+  }
+}
+.header .nav .controls .user {
+  gap: 10px;
+  font-size: 1.7rem;
+}
+@media (max-width: 600px) {
+  .header .nav .controls .user {
+    order: 1;
+  }
+}
+.header .nav .controls .user__img-wrapper {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: solid 3px black;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.header .nav .controls .user__img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+.header .nav .controls .user__name {
+  width: 15ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 600px) {
+  .header .nav .controls .user__name {
+    width: 100%;
+  }
+}
+
+.footer {
+  background-color: rgb(54, 26, 42);
+  font-size: 1.4rem;
+  font-weight: 300;
+  box-shadow: 0px -0.4px 2px rgb(247, 233, 243);
+}
+.footer__wrapper {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__text {
+  text-align: center;
+}
