@@ -248,7 +248,7 @@ body {
 .books-list .cards-container .list .item__img-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 132%;
+  padding-top: 150%;
 }
 .books-list .cards-container .list .item__img {
   position: absolute;
