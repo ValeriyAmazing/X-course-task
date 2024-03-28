@@ -2,11 +2,11 @@
   const count = document.getElementById("count");
   const total = document.getElementById("total-price");
   const price = document.getElementById("price");
-  const image = document.querySelector(".detail__img");
-  const name = document.querySelector(".inner-detail__name");
-  const author = document.querySelector(".inner-detail__author");
-  const level = document.querySelector(".inner-detail__level");
-  const tags = document.querySelector(".inner-detail__tags");
+  const image = document.querySelector(".img-container img");
+  const name = document.querySelector(".detail__name");
+  const author = document.querySelector(".detail__author");
+  const level = document.querySelector(".detail__level");
+  const tags = document.querySelector(".detail__tags");
   const description = document.querySelector(".description__text");
   document.getElementById("increase").addEventListener("click", () => {
     count.value = +count.value + 1;

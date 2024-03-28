@@ -1,127 +1,121 @@
 .book {
-    &__wrapper {
-        padding-block: 30px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 2.5rem;
-    }
+    padding-block: 20px;
+    display: grid;
+    grid-template-columns: auto 1.6fr 1.4fr;
+    grid-template-areas:
+        "img detail form"
+        "description description description";
+    gap: 14px;
 
-    .detail {
-        display: flex;
-        flex: 1 1 60%;
-        gap: 2rem;
-
-        @media (max-width: 599px) {
-            flex-wrap: wrap;
-        }
-
-        &__img-wrapper {
-            position: relative;
-            width: 40%;
-            padding-top: 52%;
-        }
-
-        &__img {
-            position: absolute;
-            top: 0;
-            left: 0;
+    .img-container {
+        grid-area: img;
+        width: 240px;
+        height: 370px;
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
         }
+    }
 
-        .inner-detail {
-            display: flex;
-            flex: 1 1 300px;
-            flex-direction: column;
-            gap: 1.5rem;
+    .detail {
+        grid-area: detail;
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
 
-            &__name {
-                font-size: 2.3rem;
-                font-weight: 500;
-            }
+        &__name,
+        &__author {
+            text-transform: capitalize;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        &__name {
+            font-size: 2.1rem;
+            font-weight: 500;
+        }
 
-            &__author {
-                font-size: 2rem;
-            }
+        &__author {
+            font-size: 1.8rem;
+        }
 
-            &__level,
-            &__tags {
-                font-size: 1.7rem;
-            }
+        &__level {
+            font-size: 1.7rem;
+        }
 
-            .rating {
-                display: flex;
-                flex-direction: row-reverse;
-                height: 4rem;
-                border: none;
-                // background-color: aqua;
-                padding: 0;
-                justify-content: start;
-
-                input {
-                    display: none;
-                    &:hover ~ label,
-                    &:hover ~ label ~ label,
-                    &:checked ~ label,
-                    &:checked ~ label ~ label {
-                        color: $accentA;
-                    }
-                }
-
-                label {
-                    display: inline-block;
-                    position: relative;
-                    width: 1.1em;
-                    font-size: 4rem;
-                    color: $accent;
-                    &::before {
-                        content: "\2605";
-                        line-height: 4rem;
-                        position: absolute;
-                    }
-                }
-            }
+        &__tags {
+            font-size: 1.6rem;
         }
     }
 
     .form {
+        grid-area: form;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
-        flex: 1 1 300px;
+        gap: 12px;
+        padding: 15px 12px;
+        background-color: rgba(252, 252, 252, 0.089);
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0.1px 0.1px 3px black;
         align-self: start;
-        padding: 8px;
-        border-radius: 4px;
-        background-color: rgba(245, 222, 179, 0.096);
 
         &__wrapper {
             display: flex;
             justify-content: space-between;
-            align-items: center;
             font-size: 1.7rem;
+
+            input {
+                flex: 0 0 30px;
+                text-align: center;
+            }
+        }
+
+        &__btn-wrapper {
+            display: flex;
+            gap: 5px;
+            justify-content: end;
+
+            input {
+                background-color: rgba(255, 255, 255, 0.295);
+            }
         }
 
         &__btn {
             align-self: flex-end;
         }
-
-        &__input {
-            max-width: 5rem;
-            text-align: center;
-            background-color: #ffffff05;
-            color: white;
-            font-size: 1.7rem;
-            font-weight: 300;
-        }
     }
 
     .description {
-        width: 100%;
-        font-size: 1.6rem;
-        text-align: justify;
-        line-height: 140%;
+        grid-area: description;
+        font-size: 1.8rem;
+    }
+
+    @media (max-width: 1024px) {
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+            "img detail"
+            "img form"
+            "description description";
+
+        .form {
+            align-self: end;
+        }
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: auto auto;
+        grid-template-areas:
+            "img empty"
+            "detail detail"
+            "form form"
+            "description description";
+        .img-container{
+            width: 200px;
+            height: 300px;
+        }
     }
 }

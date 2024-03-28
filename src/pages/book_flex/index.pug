@@ -1,0 +1,46 @@
+extends ../../layouts/layout
+block scripts 
+    script(src="main.js")
+block content
+    section.book 
+        .book__wrapper.container
+            .detail 
+                .detail__img-wrapper
+                    img.detail__img(src="../../img/cover.webp", alt="Book name")
+                .inner-detail
+                    p.inner-detail__name Book Loooooong Loooooong Name
+                    p.inner-detail__author John Dou 
+                    p.inner-detail__level Beginner 
+                    .inner-detail__tags 
+                        a(href="#") #book-tag
+                        a(href="#") #book-tag
+                        a(href="#") #book-tag
+                    fieldset.rating 
+                        input(type="radio", name="rating" value="5" id="stars5")
+                        label(for="stars5") 
+                        input(type="radio", name="rating" value="4" id="stars4")
+                        label(for="stars4") 
+                        input(type="radio", name="rating" value="3" id="stars3")
+                        label(for="stars3") 
+                        input(type="radio", name="rating" value="2" id="stars2")
+                        label(for="stars2") 
+                        input(type="radio", name="rating" value="1" id="stars1")
+                        label(for="stars1") 
+
+            form.form#form(action="/") 
+                .form__wrapper 
+                    p.form__text Price, $
+                    p.form__value#price 17
+                .form__wrapper 
+                    p.form__text Count
+                    .form__inner-wrapper 
+                        button#dencrease -
+                        input.form__input(type="number", name="count" id="count" value="1")
+                        button#increase +
+                .form__wrapper
+                    p.form__text Total price:
+                    p.form__value#total-price 51
+                button.form__btn(type="submit") Add to cart 
+            .description 
+                p.description__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos unde, natus nobis magnam, dolorem alias aliquam ea, quidem quae optio ullam hic inventore rerum autem? Suscipit est neque ipsum delectus!
+

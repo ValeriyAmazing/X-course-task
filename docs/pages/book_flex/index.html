@@ -26,19 +26,51 @@
       </div>
     </header>
     <main>
-      <section class="auth">
-        <div class="auth__container container">
-          <form class="form" action="/"> 
-            <div class="form__input-wrapper">
-              <label class="form__label" for="name">Username</label>
-              <input class="form__input" type="text" id="name">
+      <section class="book"> 
+        <div class="book__wrapper container">
+          <div class="detail"> 
+            <div class="detail__img-wrapper"><img class="detail__img" src="../../img/cover.webp" alt="Book name"></div>
+            <div class="inner-detail">
+              <p class="inner-detail__name">Book Loooooong Loooooong Name</p>
+              <p class="inner-detail__author">John Dou </p>
+              <p class="inner-detail__level">Beginner </p>
+              <div class="inner-detail__tags"> <a href="#">#book-tag</a><a href="#">#book-tag</a><a href="#">#book-tag</a></div>
+              <fieldset class="rating"> 
+                <input type="radio" name="rating" value="5" id="stars5">
+                <label for="stars5"> </label>
+                <input type="radio" name="rating" value="4" id="stars4">
+                <label for="stars4"> </label>
+                <input type="radio" name="rating" value="3" id="stars3">
+                <label for="stars3"> </label>
+                <input type="radio" name="rating" value="2" id="stars2">
+                <label for="stars2"> </label>
+                <input type="radio" name="rating" value="1" id="stars1">
+                <label for="stars1"> </label>
+              </fieldset>
             </div>
-            <div class="form__input-wrapper">
-              <label class="form__label" for="password">Password</label>
-              <input class="form__input" type="password" id="password">
+          </div>
+          <form class="form" id="form" action="/"> 
+            <div class="form__wrapper"> 
+              <p class="form__text">Price, $</p>
+              <p class="form__value" id="price">17</p>
             </div>
-            <button class="form__btn" type="submit">Log in</button>
+            <div class="form__wrapper"> 
+              <p class="form__text">Count</p>
+              <div class="form__inner-wrapper"> 
+                <button id="dencrease">-</button>
+                <input class="form__input" type="number" name="count" id="count" value="1">
+                <button id="increase">+</button>
+              </div>
+            </div>
+            <div class="form__wrapper">
+              <p class="form__text">Total price:</p>
+              <p class="form__value" id="total-price">51</p>
+            </div>
+            <button class="form__btn" type="submit">Add to cart </button>
           </form>
+          <div class="description"> 
+            <p class="description__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos unde, natus nobis magnam, dolorem alias aliquam ea, quidem quae optio ullam hic inventore rerum autem? Suscipit est neque ipsum delectus!</p>
+          </div>
         </div>
       </section>
     </main>
@@ -47,5 +79,6 @@
         <p class="footer__text">Designed and Developed by Valerii Kartashov. <br>© PROMETHEUS 2024 </p>
       </div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>

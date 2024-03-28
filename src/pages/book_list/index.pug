@@ -14,8 +14,8 @@ block content
                             option(value="price") Price
                             option(value="author") Author 
                             option(value="title") Title
-            .cards 
-                ul.cards__list#list
+            .cards-container 
+                ul.list#list
                     for book in [{name:'bookname', author:'authorBook',img:'../../img/cover2.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover2.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover1.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover1.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'}]
                         li.item
                             .item__img-wrapper
