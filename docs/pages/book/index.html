@@ -26,53 +26,67 @@
       </div>
     </header>
     <main>
-      <section class="book container">
-        <div class="img-container"><img src="../../img/cover.webp" alt="Book name"></div>
-        <div class="detail">
-          <p class="detail__name">Book Loooooong Loooooong Name</p>
-          <p class="detail__author">John Dou </p>
-          <p class="detail__level">Beginner </p>
-          <div class="detail__tags"> <a href="#">#book-tag</a><a href="#">#book-tag</a><a href="#">#book-tag</a></div>
-          <fieldset class="rating"> 
-            <input type="radio" name="rating" value="5" id="stars5">
-            <label for="stars5"> </label>
-            <input type="radio" name="rating" value="4" id="stars4">
-            <label for="stars4"> </label>
-            <input type="radio" name="rating" value="3" id="stars3">
-            <label for="stars3"> </label>
-            <input type="radio" name="rating" value="2" id="stars2">
-            <label for="stars2"> </label>
-            <input type="radio" name="rating" value="1" id="stars1">
-            <label for="stars1"> </label>
-          </fieldset>
-        </div>
-        <fieldset class="form form" id="form">
-          <div class="form__wrapper"> 
-            <p class="form__text">Price, $</p>
-            <p class="form__value" id="price">17</p>
-          </div>
-          <div class="form__wrapper"> 
-            <p class="form__text">Count</p>
-            <div class="form__btn-wrapper"> 
-              <button id="dencrease">-</button>
-              <input class="form__input" type="number" name="count" id="count" value="1">
-              <button id="increase">+</button>
+      <section class="book">
+        <div class="container">
+          <div class="book__content">
+            <div class="book__img" style="background-image:url(../../img/cover.webp)"></div>
+            <div class="book__detail">
+              <div class="detail">
+                <p class="detail__name">Book Loooooong Loooooong Name</p>
+                <p class="detail__author">John Dou </p>
+                <p class="detail__level">Beginner </p>
+                <div class="detail__tags"> <a href="#">#book-tag</a><a href="#">#book-tag</a><a href="#">#book-tag</a></div>
+                <div class="detail_rating">
+                  <fieldset class="rating"> 
+                    <input type="radio" name="rating" value="5" id="stars5">
+                    <label for="stars5"> </label>
+                    <input type="radio" name="rating" value="4" id="stars4">
+                    <label for="stars4"> </label>
+                    <input type="radio" name="rating" value="3" id="stars3">
+                    <label for="stars3"> </label>
+                    <input type="radio" name="rating" value="2" id="stars2">
+                    <label for="stars2"> </label>
+                    <input type="radio" name="rating" value="1" id="stars1">
+                    <label for="stars1"> </label>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="book__order">
+              <div class="order" id="order">
+                <div class="order__wrapper"> 
+                  <p class="order__text">Price, $</p>
+                  <p class="order__value" id="price">17</p>
+                </div>
+                <div class="order__wrapper"> 
+                  <p class="order__text">Count</p>
+                  <div class="order__btn-wrapper"> 
+                    <button id="dencrease">-</button>
+                    <input class="form__input" type="number" name="count" id="count" value="1">
+                    <button id="increase">+</button>
+                  </div>
+                </div>
+                <div class="order__wrapper">
+                  <p class="order__text">Total price:</p>
+                  <p class="order__value" id="total-price">51</p>
+                </div>
+                <button class="order__btn" type="submit">Add to cart </button>
+              </div>
+            </div>
+            <div class="book__description">
+              <div class="description"> 
+                <p class="description__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos unde, natus nobis magnam, dolorem alias aliquam ea, quidem quae optio ullam hic inventore rerum autem? Suscipit est neque ipsum delectus!</p>
+              </div>
             </div>
           </div>
-          <div class="form__wrapper">
-            <p class="form__text">Total price:</p>
-            <p class="form__value" id="total-price">51</p>
-          </div>
-          <button class="form__btn" type="submit">Add to cart </button>
-        </fieldset>
-        <div class="description"> 
-          <p class="description__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos unde, natus nobis magnam, dolorem alias aliquam ea, quidem quae optio ullam hic inventore rerum autem? Suscipit est neque ipsum delectus!</p>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__wrapper container"> 
-        <p class="footer__text">Designed and Developed by Valerii Kartashov. <br>© PROMETHEUS 2024 </p>
+      <div class="footer__content">
+        <div class="container"> 
+          <p class="footer__text">Designed and Developed by Valerii Kartashov<br> © 2024 </p>
+        </div>
       </div>
     </footer>
     <script src="main.js"></script>

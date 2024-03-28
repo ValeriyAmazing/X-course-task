@@ -4,31 +4,6 @@
   const options = document.getElementById("category");
 
   window.onload = filter
-//   async function () {
-//     const { books } = await fetch("books.json").then((response) =>
-//       response.json(),
-//     );
-//     list.innerHTML =
-//       books
-//         .map(
-//           ({ author, price, image, title }) => `
-//         <li class="item">
-//             <div class="item__img-wrapper">
-//                 <img class="item__img" src=${
-//                   image || "../../img/default_book_cover.webp"
-//                 } alt=${title}></div>
-//             <p class="item__name">${title}</p>
-//             <p class="item__author">${author}</p>
-//             <div class="item__bottom-wrapper">
-//                 <span class="item__price">${price}</span>
-//                 <a href="../book"><button class="item__btn">Viev</button></a>
-//             </div>
-//         </li>
-// `,
-//         )
-//         .join("") ||
-//       `<li style="font-size: 3rem; text-align: center; width:100%">Nothing to show</li>`;
-//   };
 
   async function filter() {
     const { books } = await fetch("../../books.json").then((response) =>
@@ -54,19 +29,15 @@
         })
         .map(
           ({ author, price, image, title }) => `
-        <li class="item">
-            <div class="item__img-wrapper">
-                <img class="item__img" src=${
-                  image || "../../img/default_book_cover.webp"
-                } alt=${title}></div>
-            <p class="item__name">${title}</p>
-            <p class="item__author">${author}</p>
-            <div class="item__bottom-wrapper">
-                <span class="item__price">${price}</span>
-                <a href="../book">
-                  <button class="item__btn">Viev</button>
-                </a>
+          <li class="books__item">
+          <div class="book">
+            <div class="book__img" style="background-image: url(${image || "../../img/default_book_cover.webp"})"></div>
+            <p class="book__name">${title}</p>
+            <p class="book__author">${author}</p>
+            <div class="book__bottom-wrapper"><span class="book__price">${price}</span>
+              <button class="book__btn">Viev</button>
             </div>
+          </div>
         </li>`,
         )
         .join("") ||

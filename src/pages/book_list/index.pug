@@ -2,26 +2,25 @@ extends ../../layouts/layout
 block scripts 
     script(src="main.js")
 block content
-    section.books-list
-        .book-list__container.container
-            .search
-                form.form(action="/") 
-                    .form__search-wrapper 
+    section.books
+        .container
+            .books__search
+                .search
+                    .search__input-wrapper 
                         input(type="search", name="search" id="search")
-                    .form__option-wrapper 
-                        label(for="category") Sort by:
-                        select(name="category" id="category")
+                    .search__filter-wrapper 
+                        label(for="filter") Sort by:
+                        select(name="filter" id="filter")
                             option(value="price") Price
                             option(value="author") Author 
                             option(value="title") Title
-            .cards-container 
+            .books__list
                 ul.list#list
-                    for book in [{name:'bookname', author:'authorBook',img:'../../img/cover2.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover2.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover1.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover1.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'},{name:'bookname', author:'authorBook',img:'../../img/cover.webp', price:'100'}]
-                        li.item
-                            .item__img-wrapper
-                                img.item__img(src=book.img, alt="")
+                    for book in []
+                        li.list__item.item
+                            a.item__img-wrapper
+                                .item__img(style=`background-image:url(${book.img})`)
                             p.item__name= book.name
                             p.item__author= book.author 
-                            .item__bottom-wrapper
-                                span.item__price= book.price 
-                                button.item__btn Viev
+                            span.item__price= book.price 
+                            button.item__btn Viev

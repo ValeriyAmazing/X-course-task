@@ -26,97 +26,111 @@
       </div>
     </header>
     <main>
-      <section class="books-list">
-        <div class="book-list__container container">
-          <div class="search">
-            <form class="form" action="/"> 
-              <div class="form__search-wrapper"> 
-                <input type="search" name="search" id="search">
-              </div>
-              <div class="form__option-wrapper"> 
-                <label for="category">Sort by:</label>
-                <select name="category" id="category">
-                  <option value="price">Price</option>
-                  <option value="author">Author </option>
-                  <option value="title">Title</option>
-                </select>
-              </div>
-            </form>
+      <section class="books">
+        <div class="container">
+          <div class="books__search search">
+            <div class="search__search-input-wrapper">
+              <input type="search" name="search" id="search">
+            </div>
+            <div class="search__filter-input-wrapper">
+              <label for="category">Sort by:</label>
+              <select name="category" id="category">
+                <option value="price">Price</option>
+                <option value="author">Author </option>
+                <option value="title">Title</option>
+              </select>
+            </div>
           </div>
-          <div class="cards-container"> 
-            <ul class="list" id="list">
-              <li class="item">
-                <div class="item__img-wrapper"><img class="item__img" src="../../img/cover2.webp" alt=""></div>
-                <p class="item__name">bookname</p>
-                <p class="item__author">authorBook</p>
-                <div class="item__bottom-wrapper"><span class="item__price">100</span>
-                  <button class="item__btn">Viev</button>
+          <ul class="books__list" id="list">
+            <li class="books__item">
+              <div class="book">
+                <div class="book__img" style="background-image: url(../../img/cover.webp)"></div>
+                <p class="book__name">bookname</p>
+                <p class="book__author">authorBook</p>
+                <div class="book__bottom-wrapper"><span class="book__price">100</span>
+                  <button class="book__btn">Viev</button>
                 </div>
-              </li>
-              <li class="item">
-                <div class="item__img-wrapper"><img class="item__img" src="../../img/cover2.webp" alt=""></div>
-                <p class="item__name">bookname</p>
-                <p class="item__author">authorBook</p>
-                <div class="item__bottom-wrapper"><span class="item__price">100</span>
-                  <button class="item__btn">Viev</button>
+              </div>
+            </li>
+            <li class="books__item">
+              <div class="book">
+                <div class="book__img" style="background-image: url(../../img/cover.webp)"></div>
+                <p class="book__name">bookname</p>
+                <p class="book__author">authorBook</p>
+                <div class="book__bottom-wrapper"><span class="book__price">100</span>
+                  <button class="book__btn">Viev</button>
                 </div>
-              </li>
-              <li class="item">
-                <div class="item__img-wrapper"><img class="item__img" src="../../img/cover.webp" alt=""></div>
-                <p class="item__name">bookname</p>
-                <p class="item__author">authorBook</p>
-                <div class="item__bottom-wrapper"><span class="item__price">100</span>
-                  <button class="item__btn">Viev</button>
+              </div>
+            </li>
+            <li class="books__item">
+              <div class="book">
+                <div class="book__img" style="background-image: url(../../img/cover.webp)"></div>
+                <p class="book__name">bookname</p>
+                <p class="book__author">authorBook</p>
+                <div class="book__bottom-wrapper"><span class="book__price">100</span>
+                  <button class="book__btn">Viev</button>
                 </div>
-              </li>
-              <li class="item">
-                <div class="item__img-wrapper"><img class="item__img" src="../../img/cover1.webp" alt=""></div>
-                <p class="item__name">bookname</p>
-                <p class="item__author">authorBook</p>
-                <div class="item__bottom-wrapper"><span class="item__price">100</span>
-                  <button class="item__btn">Viev</button>
+              </div>
+            </li>
+            <li class="books__item">
+              <div class="book">
+                <div class="book__img" style="background-image: url(../../img/cover1.webp)"></div>
+                <p class="book__name">bookname</p>
+                <p class="book__author">authorBook</p>
+                <div class="book__bottom-wrapper"><span class="book__price">100</span>
+                  <button class="book__btn">Viev</button>
                 </div>
-              </li>
-              <li class="item">
-                <div class="item__img-wrapper"><img class="item__img" src="../../img/cover1.webp" alt=""></div>
-                <p class="item__name">bookname</p>
-                <p class="item__author">authorBook</p>
-                <div class="item__bottom-wrapper"><span class="item__price">100</span>
-                  <button class="item__btn">Viev</button>
+              </div>
+            </li>
+            <li class="books__item">
+              <div class="book">
+                <div class="book__img" style="background-image: url(../../img/cover1.webp)"></div>
+                <p class="book__name">bookname</p>
+                <p class="book__author">authorBook</p>
+                <div class="book__bottom-wrapper"><span class="book__price">100</span>
+                  <button class="book__btn">Viev</button>
                 </div>
-              </li>
-              <li class="item">
-                <div class="item__img-wrapper"><img class="item__img" src="../../img/cover.webp" alt=""></div>
-                <p class="item__name">bookname</p>
-                <p class="item__author">authorBook</p>
-                <div class="item__bottom-wrapper"><span class="item__price">100</span>
-                  <button class="item__btn">Viev</button>
+              </div>
+            </li>
+            <li class="books__item">
+              <div class="book">
+                <div class="book__img" style="background-image: url(../../img/cover.webp)"></div>
+                <p class="book__name">bookname</p>
+                <p class="book__author">authorBook</p>
+                <div class="book__bottom-wrapper"><span class="book__price">100</span>
+                  <button class="book__btn">Viev</button>
                 </div>
-              </li>
-              <li class="item">
-                <div class="item__img-wrapper"><img class="item__img" src="../../img/cover.webp" alt=""></div>
-                <p class="item__name">bookname</p>
-                <p class="item__author">authorBook</p>
-                <div class="item__bottom-wrapper"><span class="item__price">100</span>
-                  <button class="item__btn">Viev</button>
+              </div>
+            </li>
+            <li class="books__item">
+              <div class="book">
+                <div class="book__img" style="background-image: url(../../img/cover.webp)"></div>
+                <p class="book__name">bookname</p>
+                <p class="book__author">authorBook</p>
+                <div class="book__bottom-wrapper"><span class="book__price">100</span>
+                  <button class="book__btn">Viev</button>
                 </div>
-              </li>
-              <li class="item">
-                <div class="item__img-wrapper"><img class="item__img" src="../../img/cover.webp" alt=""></div>
-                <p class="item__name">bookname</p>
-                <p class="item__author">authorBook</p>
-                <div class="item__bottom-wrapper"><span class="item__price">100</span>
-                  <button class="item__btn">Viev</button>
+              </div>
+            </li>
+            <li class="books__item">
+              <div class="book">
+                <div class="book__img" style="background-image: url(../../img/cover.webp)"></div>
+                <p class="book__name">bookname</p>
+                <p class="book__author">authorBook</p>
+                <div class="book__bottom-wrapper"><span class="book__price">100</span>
+                  <button class="book__btn">Viev</button>
                 </div>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__wrapper container"> 
-        <p class="footer__text">Designed and Developed by Valerii Kartashov. <br>© PROMETHEUS 2024 </p>
+      <div class="footer__content">
+        <div class="container"> 
+          <p class="footer__text">Designed and Developed by Valerii Kartashov<br> © 2024 </p>
+        </div>
       </div>
     </footer>
     <script src="main.js"></script>
